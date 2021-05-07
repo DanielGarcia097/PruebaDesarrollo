@@ -1,0 +1,12 @@
+.minh-100 {
+    height: 100vh;
+  }
+
+  #text-container{
+    height: auto;
+    word-break: break-all;
+  }
+
+  #btn-load-file{
+    margin-top: 10px;
+  }

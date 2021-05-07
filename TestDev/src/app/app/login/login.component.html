@@ -1,0 +1,39 @@
+<section id="login" class = "mb-5">
+    <div class = "container">
+        <div class = "row justify-content-center align-items-center minh-100">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                <div class = "cardlogin">
+                    <div class = "card">
+
+                        <div class="card-body text-center">
+
+                            <form #formLogin = "ngForm" (ngSubmit) = "onLoginApi()">
+                                <div class="mb-3">
+                                  <label for="emailtag" class="form-label">Correo electronico</label>
+                                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)] = "user.email" required placeholder="Email" name = "email">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="passwordtag" class="form-label">Contraseña</label>
+                                  <input type="password" class="form-control" id="password" name = "password" [(ngModel)] = "user.password" placeholder="Password">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Login</button>
+
+                                <div class="form-group">
+                                    <a routerLink = "/registro" class="form-control-login-user">¿Desea registrarse?</a>
+                                </div>
+
+                                <div class="alert alert-danger" role="alert" *ngIf = "errorLogin">
+                                    Credenciales no validas!
+                                  </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+

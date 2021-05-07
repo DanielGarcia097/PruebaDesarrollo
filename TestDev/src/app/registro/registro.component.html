@@ -1,0 +1,39 @@
+<section id="login" class = "mb-5">
+    <div class = "container">
+        <div class = "row justify-content-center align-items-center minh-100">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                <div class = "cardlogin">
+                    <div class = "card">
+
+                        <div class="card-body text-center">
+
+                            <form #formLogin = "ngForm" (ngSubmit) = "onRegistroApi()">
+                                <div class="mb-3">
+                                  <label for="exampleInputEmail1" class="form-label">Nombre </label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)] = "user.nombre" required placeholder="Ingrese su nombre" name = "nombre">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email </label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)] = "user.email" required placeholder="Ingrese su correo" name = "email">
+                                  </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)] = "user.password" placeholder="Ingrese su contraseña" name="password">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="confirm_password" [(ngModel)] = "user.password_confirmation" placeholder="Confirme contraseña" name ="confirm_password">
+                                  </div>
+                                <button type="submit" class="btn btn-primary">Registrar</button>
+
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
